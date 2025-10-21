@@ -1,6 +1,10 @@
 # BDD AI Assistant
 
-A modern Behavior Driven Development assistant powered by LLMs that generates automated tests and living documentation from Gherkin feature files.
+Modern Behavior Driven Development assistant powered by LLMs that generates automated tests and living documentation from Gherkin feature files.
+
+## 🌐 Live Demo
+
+Visit the live application: [https://tahakunduz.github.io/domates](https://tahakunduz.github.io/domates)
 
 ## Features
 
@@ -11,51 +15,21 @@ A modern Behavior Driven Development assistant powered by LLMs that generates au
 - 🎯 Toggle between manual and automated execution
 - 📊 Beautiful dashboard for visualizing features and results
 
-## Quick Start
+## Local Development
 
 ```bash
 # Install dependencies
+cd bdd-web
 npm install
 
-# Build the project
-npm run build
-
-# Generate tests from feature files
-npx bdd-ai generate tests --from features/
-
-# Start the development server
+# Start development server
 npm run dev
 ```
 
-## Project Structure
+## Deployment
 
-```
-├── src/
-│   ├── parser/          # Feature file parser
-│   ├── generator/       # LLM test generator
-│   ├── docs/           # Documentation generator
-│   ├── cli/            # Command line interface
-│   ├── types/          # TypeScript type definitions
-│   └── server/         # Express server
-├── frontend/           # Next.js dashboard
-├── features/           # Example .feature files
-├── tests/              # Generated test files
-└── docs/               # Generated documentation
-```
-
-## Environment Variables
-
-Create a `.env` file:
-
-```env
-OPENAI_API_KEY=your_openai_api_key
-LINEAR_API_KEY=your_linear_api_key
-PORT=3000
-```
+This project is automatically deployed to GitHub Pages using GitHub Actions. The deployment happens automatically when you push to the `main` branch.
 
 ## License
 
 MIT
-
-
-

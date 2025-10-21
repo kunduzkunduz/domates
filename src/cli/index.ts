@@ -70,6 +70,10 @@ program
 
       spinner.text = `Parsed ${parsedFeatures.length} feature(s)`;
 
+      // Declare variables for summary
+      let generatedTests: any[] = [];
+      let generatedDocs: any[] = [];
+
       // Generate tests
       if (options.tests) {
         spinner.text = 'Generating test files...';
@@ -81,7 +85,7 @@ program
         };
 
         const testGenerator = new TestGenerator(process.env.OPENAI_API_KEY);
-        const generatedTests = await testGenerator.generateTestsForFeatures(parsedFeatures, testOptions);
+        generatedTests = await testGenerator.generateTestsForFeatures(parsedFeatures, testOptions);
 
         // Write test files
         for (const test of generatedTests) {
@@ -105,7 +109,7 @@ program
         };
 
         const docGenerator = new DocumentationGenerator();
-        const generatedDocs = await docGenerator.generateDocumentationForFeatures(parsedFeatures, docOptions);
+        generatedDocs = await docGenerator.generateDocumentationForFeatures(parsedFeatures, docOptions);
 
         // Write documentation files
         for (const doc of generatedDocs) {

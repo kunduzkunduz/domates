@@ -1,4 +1,4 @@
-import { Parser, AstBuilder, GherkinClassicTokenMatcher } from '@gherkin/gherkin';
+import { Parser, AstBuilder, GherkinClassicTokenMatcher } from '@cucumber/gherkin';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { ParsedFeature, Feature, Scenario, Step, Background, Example, Location } from '../types';
@@ -7,8 +7,8 @@ export class FeatureParser {
   private parser: Parser<Feature>;
 
   constructor() {
-    const tokenMatcher = new GherkinClassicTokenMatcher();
-    const astBuilder = new AstBuilder();
+    const tokenMatcher = new GherkinClassicTokenMatcher('en');
+    const astBuilder = new AstBuilder(() => Math.random().toString(36).substr(2, 9));
     this.parser = new Parser(astBuilder, tokenMatcher);
   }
 

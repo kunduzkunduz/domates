@@ -33,7 +33,7 @@ export async function startServer(port: number = 3000, host: string = 'localhost
           name: pf.feature.name,
           description: pf.feature.description,
           tags: pf.feature.tags,
-          scenarios: pf.feature.scenarios.length,
+          scenarioCount: pf.feature.scenarios.length,
           filePath: pf.filePath,
           scenarios: pf.feature.scenarios.map(s => ({
             name: s.name,
