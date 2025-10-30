@@ -1,0 +1,157 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Kunduz Brand Identity - DIN Round Pro Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  
+  /* Kunduz Brand Color Palette */
+  --kunduz-blue-crayola: #2B81FC;
+  --kunduz-blue-de-france: #205EB8;
+  --kunduz-robin-egg-blue: #01CCBC;
+  --kunduz-persian-green: #00A396;
+  --kunduz-tart-orange: #FB5058;
+  --kunduz-fluorescent-orange: #FABE00;
+  --kunduz-orange: #FF8001;
+  --kunduz-flirt: #9C006D;
+  --kunduz-deep-violet: #440063;
+  --kunduz-jet: #2E3333;
+  --kunduz-outer-space: #434848;
+  --kunduz-old-silver: #828585;
+  --kunduz-silver-chalice: #A3AFAF;
+  --kunduz-silver-sand: #BAC3C3;
+  --kunduz-isabelline: #E8EBEB;
+  --kunduz-anti-flash-white: #F3F4F4;
+  --kunduz-snow: #F9FAFA;
+  --kunduz-white: #FFFFFF;
+  
+  /* Spacing */
+  --kunduz-tiny: 8px;
+  --kunduz-small: 16px;
+  --kunduz-base: 24px;
+  --kunduz-large: 48px;
+  --kunduz-xlarge: 64px;
+  
+  /* Updated Tailwind colors to match Kunduz Brand */
+  --background: #F9FAFA; /* Snow */
+  --foreground: #2E3333; /* Jet */
+  --card: #FFFFFF; /* White */
+  --card-foreground: #2E3333; /* Jet */
+  --popover: #FFFFFF; /* White */
+  --popover-foreground: #2E3333; /* Jet */
+  --primary: #2B81FC; /* Blue Crayola */
+  --primary-foreground: #FFFFFF; /* White */
+  --secondary: #F3F4F4; /* Anti-Flash White */
+  --secondary-foreground: #2E3333; /* Jet */
+  --muted: #F3F4F4; /* Anti-Flash White */
+  --muted-foreground: #828585; /* Old Silver */
+  --accent: #FB5058; /* Tart Orange */
+  --accent-foreground: #FFFFFF; /* White */
+  --destructive: #FB5058; /* Tart Orange */
+  --border: #E8EBEB; /* Isabelline */
+  --input: #E8EBEB; /* Isabelline */
+  --ring: #2B81FC; /* Blue Crayola */
+  --chart-1: #2B81FC; /* Blue Crayola */
+  --chart-2: #01CCBC; /* Robin Egg Blue */
+  --chart-3: #FABE00; /* Fluorescent Orange */
+  --chart-4: #FB5058; /* Tart Orange */
+  --chart-5: #00A396; /* Persian Green */
+  --sidebar: #FFFFFF; /* White */
+  --sidebar-foreground: #2E3333; /* Jet */
+  --sidebar-primary: #2B81FC; /* Blue Crayola */
+  --sidebar-primary-foreground: #FFFFFF; /* White */
+  --sidebar-accent: #F3F4F4; /* Anti-Flash White */
+  --sidebar-accent-foreground: #2E3333; /* Jet */
+  --sidebar-border: #E8EBEB; /* Isabelline */
+  --sidebar-ring: #2B81FC; /* Blue Crayola */
+}
+
+.dark {
+  --background: #2E3333; /* Jet */
+  --foreground: #F9FAFA; /* Snow */
+  --card: #434848; /* Outer Space */
+  --card-foreground: #F9FAFA; /* Snow */
+  --popover: #434848; /* Outer Space */
+  --popover-foreground: #F9FAFA; /* Snow */
+  --primary: #01CCBC; /* Robin Egg Blue */
+  --primary-foreground: #2E3333; /* Jet */
+  --secondary: #434848; /* Outer Space */
+  --secondary-foreground: #F9FAFA; /* Snow */
+  --muted: #434848; /* Outer Space */
+  --muted-foreground: #828585; /* Old Silver */
+  --accent: #01CCBC; /* Robin Egg Blue */
+  --accent-foreground: #2E3333; /* Jet */
+  --destructive: #FB5058; /* Tart Orange */
+  --border: #E8EBEB; /* Isabelline */
+  --input: #E8EBEB; /* Isabelline */
+  --ring: #01CCBC; /* Robin Egg Blue */
+  --chart-1: #2B81FC; /* Blue Crayola */
+  --chart-2: #01CCBC; /* Robin Egg Blue */
+  --chart-3: #FABE00; /* Fluorescent Orange */
+  --chart-4: #FB5058; /* Tart Orange */
+  --chart-5: #00A396; /* Persian Green */
+  --sidebar: #434848; /* Outer Space */
+  --sidebar-foreground: #F9FAFA; /* Snow */
+  --sidebar-primary: #01CCBC; /* Robin Egg Blue */
+  --sidebar-primary-foreground: #2E3333; /* Jet */
+  --sidebar-accent: #434848; /* Outer Space */
+  --sidebar-accent-foreground: #F9FAFA; /* Snow */
+  --sidebar-border: #E8EBEB; /* Isabelline */
+  --sidebar-ring: #01CCBC; /* Robin Egg Blue */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+}
